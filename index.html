@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abyssinia Mesob - Luxury Ethiopian Dining</title>
+    <!-- Tailwind CSS for styling via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for premium serif and clean layout typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -16,9 +18,11 @@
 </head>
 <body class="bg-stone-950 text-stone-100 selection:bg-amber-600 selection:text-white relative overflow-x-hidden min-h-screen">
 
+    <!-- Ambient glowing backdrops for a luxury feel -->
     <div class="absolute top-0 left-1/4 w-[300px] md:w-[500px] h-[500px] bg-amber-900/10 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute top-[800px] right-0 w-[250px] md:w-[400px] h-[400px] bg-amber-900/10 rounded-full blur-[100px] pointer-events-none"></div>
 
+    <!-- NAVBAR HEADER -->
     <header class="sticky top-0 z-40 bg-stone-950/90 backdrop-blur-md border-b border-stone-900 px-4 md:px-16 py-4 flex items-center justify-between">
         <div class="flex flex-col">
             <h1 class="text-lg md:text-2xl font-bold tracking-widest text-amber-500 uppercase">Abyssinia Mesob</h1>
@@ -26,6 +30,7 @@
         </div>
         
         <div class="flex items-center space-x-3">
+            <!-- Shopping Cart Trigger Button -->
             <button onclick="toggleCart(true)" class="relative p-2 text-stone-300 hover:text-amber-500 transition-colors focus:outline-none">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -33,6 +38,7 @@
                 <span id="cart-badge" class="hidden absolute -top-1 -right-1 bg-amber-500 text-stone-950 text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
             </button>
             
+            <!-- Reservation Table Trigger Button -->
             <button onclick="toggleReservation(true)" class="bg-amber-600 hover:bg-amber-700 text-stone-950 text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-sm transition-all flex items-center space-x-1.5">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -42,9 +48,10 @@
         </div>
     </header>
 
-    <section class="relative h-[75vh] flex items-center justify-center px-4 text-center overflow-hidden">
+    <!-- HERO SECTION -->
+    <section class="relative h-[70vh] flex items-center justify-center px-4 text-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1600&q=80" alt="Abyssinia Premium" class="w-full h-full object-cover opacity-25">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1600&q=80" alt="Abyssinia Premium" class="w-full h-full object-cover opacity-25">
             <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-stone-950"></div>
         </div>
 
@@ -54,7 +61,7 @@
                 Where Taste <br><span class="italic text-amber-400">Meets Elegance.</span>
             </h2>
             <p class="text-stone-400 max-w-md mx-auto text-xs md:text-sm leading-relaxed font-light">
-                Indulge in a curated dining experience fusing traditional Ethiopian complexity with premium global culinary presentation. Crafted around the warmth of the sacred Mesob basket.
+                Indulge in a curated dining experience fusing traditional Ethiopian complexity with premium global culinary presentation.
             </p>
             <div class="pt-2">
                 <a href="#menu-section" class="inline-block border border-amber-500/40 hover:border-amber-500 text-amber-500 px-6 py-3 text-xs uppercase tracking-widest transition-all">
@@ -64,37 +71,89 @@
         </div>
     </section>
 
-    <section class="py-12 bg-stone-950 text-center px-4 border-t border-stone-900">
-        <div class="flex items-center justify-center space-x-4 max-w-md mx-auto">
+    <!-- ABOUT US SECTION -->
+    <section class="py-16 px-4 max-w-4xl mx-auto text-center space-y-4 border-t border-stone-900">
+        <div class="flex items-center justify-center space-x-4 max-w-xs mx-auto">
             <div class="h-[1px] bg-amber-500/30 flex-1"></div>
-            <h3 class="serif-font text-xl md:text-2xl tracking-wide text-amber-400">The Authentic Heritage</h3>
+            <span class="text-amber-500 uppercase tracking-widest text-[11px]">Our Story</span>
             <div class="h-[1px] bg-amber-500/30 flex-1"></div>
         </div>
-        <p class="text-stone-400 max-w-xl mx-auto text-xs md:text-sm mt-3 leading-relaxed font-light">
-            In Ethiopia, dining is an act of shared humanity. Traditional recipes passed down through generations are served over sour, soft fermented Injera bread, perfect for tasting together.
+        <h3 class="serif-font text-3xl font-normal tracking-wide">About Abyssinia Mesob</h3>
+        <p class="text-stone-400 text-xs md:text-sm leading-relaxed font-light max-w-2xl mx-auto">
+            Founded on the spirit of pure communal warmth, Abyssinia Mesob redefines premium hospitality. We preserve ancestral culinary arts using ingredients sourced from rich highlands, creating elegant gatherings centered around our beautiful, hand-woven cultural baskets.
         </p>
     </section>
 
+    <!-- DYNAMIC INTERACTIVE MENU SECTION -->
     <section id="menu-section" class="py-12 px-4 md:px-16 bg-stone-900/10 border-t border-stone-900">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-8 space-y-2">
                 <h3 id="category-heading" class="serif-font text-3xl font-normal text-stone-100 tracking-wide">Premium Traditional Ethiopian</h3>
-                <div class="flex justify-center space-x-2 pt-2">
-                    <button onclick="switchCategory('ethiopian')" class="px-3 py-1.5 text-xs tracking-wider border border-amber-500 text-amber-500 bg-amber-500/5">Ethiopian</button>
-                    <button onclick="switchCategory('premium')" class="px-3 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-400 hover:text-stone-200">Global Gourmet</button>
+                <div class="flex flex-wrap justify-center gap-2 pt-2">
+                    <button onclick="switchCategory('ethiopian')" class="px-3 py-1.5 text-xs tracking-wider border border-amber-500 text-amber-500 bg-amber-500/5 transition-all">Ethiopian Heritage</button>
+                    <button onclick="switchCategory('premium')" class="px-3 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-400 hover:text-stone-200 transition-all">Global Gourmet</button>
+                    <button onclick="switchCategory('drinks-pastry')" class="px-3 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-400 hover:text-stone-200 transition-all">Bakehouse & Bar</button>
                 </div>
             </div>
 
+            <!-- Food Grid Layout -->
             <div id="food-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                </div>
+                <!-- Injected automatically by JavaScript -->
+            </div>
         </div>
     </section>
 
-    <footer class="border-t border-stone-900 bg-stone-950 py-8 text-center text-[11px] text-stone-500 font-light">
-        <p class="tracking-widest uppercase text-stone-400 font-medium serif-font text-sm mb-1">Abyssinia Mesob</p>
-        <p>© 2026 Abyssinia Mesob Luxury Dining. All Rights Reserved.</p>
+    <!-- RESTAURANT & EXPERIENCE GALLERY SECTION -->
+    <section class="py-16 px-4 md:px-16 border-t border-stone-900 bg-stone-950">
+        <div class="max-w-5xl mx-auto space-y-8">
+            <div class="text-center space-y-1">
+                <span class="text-amber-500 uppercase tracking-widest text-[10px]">The Vibe</span>
+                <h3 class="serif-font text-3xl font-normal tracking-wide">Our Lounge & Atmosphere</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="h-48 md:h-64 overflow-hidden rounded-sm border border-stone-900 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Restaurant Main Lounge" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="h-48 md:h-64 overflow-hidden rounded-sm border border-stone-900 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=600&q=80" alt="Cocktail Mixing Station" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="h-48 md:h-64 overflow-hidden rounded-sm border border-stone-900 shadow-xl col-span-2 md:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Bakehouse Counter" class="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH SOCIAL MEDIA LINKS -->
+    <footer class="border-t border-stone-900 bg-stone-950 py-12 px-4 text-center space-y-6">
+        <div class="space-y-1">
+            <p class="tracking-widest uppercase text-stone-400 font-medium serif-font text-base">Abyssinia Mesob</p>
+            <p class="text-[11px] text-stone-500 font-light">© 2026 Abyssinia Mesob Luxury Dining. All Rights Reserved.</p>
+        </div>
+
+        <!-- Social Media Icons Integration -->
+        <div class="flex justify-center space-x-6 text-stone-400">
+            <!-- Facebook -->
+            <a href="https://facebook.com" target="_blank" class="hover:text-amber-500 transition-colors" title="Facebook">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+            </a>
+            <!-- TikTok -->
+            <a href="https://tiktok.com" target="_blank" class="hover:text-amber-500 transition-colors" title="TikTok">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.01 1.62 4.14.94 1.05 2.27 1.72 3.69 1.89v3.74c-1.78-.17-3.46-.93-4.73-2.2-.07-.07-.12-.15-.22-.27V13.5c.03 2.15-.6 4.3-1.88 6.03-1.6 2.17-4.14 3.63-6.85 3.86-2.73.23-5.54-.53-7.65-2.29C-.45 19.1-.98 15.65-.4 12.63c.63-3.23 3.12-5.96 6.35-6.79 1.06-.27 2.17-.35 3.25-.23v3.76c-1.33-.21-2.73.11-3.79.97-1.15.93-1.75 2.45-1.56 3.94.19 1.49 1.15 2.82 2.53 3.4 1.39.58 3.03.4 4.27-.45.96-.66 1.55-1.76 1.58-2.93.03-2.88 0-5.76.01-8.64-.01-.22-.01-.43-.01-.65z"/></svg>
+            </a>
+            <!-- Telegram -->
+            <a href="https://t.me" target="_blank" class="hover:text-amber-500 transition-colors" title="Telegram">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.05-.2-.06-.06-.16-.04-.23-.03-.1.02-1.69 1.07-4.77 3.15-.45.3-.86.46-1.22.45-.4-.01-1.17-.23-1.74-.41-.7-.23-1.26-.35-1.21-.74.03-.2.3-.41.82-.62 3.2-1.39 5.34-2.31 6.42-2.76 3.06-1.27 3.7-1.49 4.11-1.5.09 0 .29.02.42.13.11.09.14.21.15.3-.01.06-.01.14-.02.21z"/></svg>
+            </a>
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" class="hover:text-amber-500 transition-colors" title="Instagram">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+        </div>
     </footer>
 
+    <!-- INTERACTIVE SIDEBAR CART MODAL -->
     <div id="cart-modal" class="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-sm hidden">
         <div class="w-full max-w-md bg-stone-950 border-l border-stone-900 h-full flex flex-col justify-between p-4 shadow-2xl">
             <div>
@@ -103,7 +162,8 @@
                     <button onclick="toggleCart(false)" class="text-stone-400 hover:text-stone-100 text-xl font-bold">&times;</button>
                 </div>
                 <div id="cart-container" class="mt-4 space-y-3 overflow-y-auto max-h-[70vh]">
-                    </div>
+                    <!-- Items appended live here -->
+                </div>
             </div>
             <div id="cart-checkout-box" class="border-t border-stone-900 pt-4 space-y-3 hidden">
                 <div class="flex justify-between items-center text-xs">
@@ -117,6 +177,7 @@
         </div>
     </div>
 
+    <!-- ONLINE TABLE RESERVATION MODAL -->
     <div id="reservation-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 hidden">
         <div class="w-full max-w-sm bg-stone-950 border border-stone-900 p-5 rounded-sm relative space-y-4">
             <button onclick="toggleReservation(false)" class="absolute top-3 right-3 text-stone-400 hover:text-stone-100 text-xl font-bold">&times;</button>
@@ -162,6 +223,7 @@
         </div>
     </div>
 
+    <!-- FLOATING ARTIFICIAL INTELLIGENCE AGENT DINING ASSISTANT -->
     <div class="fixed bottom-4 right-4 z-50 flex flex-col items-end">
         <div id="ai-chat-box" class="w-72 md:w-80 h-80 bg-stone-950 border border-amber-500/30 rounded-sm shadow-2xl flex flex-col justify-between mb-2 overflow-hidden hidden">
             <div class="bg-stone-900 border-b border-stone-800 p-2.5 flex items-center justify-between">
@@ -174,7 +236,7 @@
 
             <div id="ai-messages-stream" class="flex-1 p-3 overflow-y-auto space-y-2 text-[11px] leading-relaxed">
                 <div class="bg-stone-900 text-stone-300 p-2 rounded-sm max-w-[90%]">
-                    Selam! Welcome to Abyssinia Mesob. I can explain traditional spice profiles, describe our meals, or suggest food pairings! Try asking about "Injera", "Berbere", or "Doro Wat".
+                    Selam! Welcome to Abyssinia Mesob. I can explain traditional spice profiles, describe our meals, pastries, or curated cocktails!
                 </div>
             </div>
 
@@ -191,29 +253,31 @@
         </button>
     </div>
 
+    <!-- APP ENGINE JAVASCRIPT LOGIC WORKER -->
     <script>
-        // Global State Menu Datastore Array
         const MENU_DATA = [
-            { id: 'eth-1', name: 'Special Beyaynetu (እንጀራ በያይነቱ)', category: 'ethiopian', price: 24.00, desc: 'A vibrant platter of colorful split peas, lentils, and slow cooked seasonal vegetable stews perfectly spread over spongy sourdough Injera.', img: 'https://images.unsplash.com/photo-1652545199431-1e967a57a075?auto=format&fit=crop&w=600&q=80' },
-            { id: 'eth-2', name: 'Doro Wat (ዶሮ ወጥ)', category: 'ethiopian', price: 28.50, desc: 'The traditional masterpiece of slow-simmered chicken drumsticks in rich deep Berbere sauce, accented with spiced butter and hard boiled egg.', img: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80' },
-            { id: 'eth-3', name: 'Premium Sizzling Kitfo (ክትፎ)', category: 'ethiopian', price: 26.00, desc: 'Finely minced ultra-lean beef blended with warm Mitmita spice blends and rich clarified Niter Kibbeh butter, paired with homemade soft cheese.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80' },
+            // Ethiopian Heritage Tab
+            { id: 'eth-1', name: 'Special Beyaynetu (እንጀራ በያይነቱ)', category: 'ethiopian', price: 24.00, desc: 'A rich platter of colorful split peas, lentils, and slow cooked seasonal vegetable stews perfectly spread over spongy sourdough Injera.', img: 'https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80' },
+            { id: 'eth-2', name: 'Doro Wat (ዶሮ ወጥ)', category: 'ethiopian', price: 28.50, desc: 'The traditional masterpiece of slow-simmered chicken drumsticks in rich deep Berbere sauce, accented with spiced butter and hard boiled egg.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80' },
+            
+            // Global Gourmet Tab
             { id: 'prem-1', name: 'Seared Wagyu Fillet Gold', category: 'premium', price: 48.00, desc: 'Ultra-premium pan-seared wagyu beef finished in melted mountain herbs, paired with delicate reduction purées and seasonal garnishing.', img: 'https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=600&q=80' },
-            { id: 'prem-2', name: 'Truffle Wild Forest Risotto', category: 'premium', price: 32.50, desc: 'Rich Arborio rice creamy blend folded with selected wild mushrooms, complete with shavings of black winter truffles.', img: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=600&q=80' }
+            { id: 'prem-2', name: 'Truffle Wild Forest Risotto', category: 'premium', price: 32.50, desc: 'Rich Arborio rice creamy blend folded with selected wild mushrooms, complete with shavings of black winter truffles.', img: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=600&q=80' },
+            
+            // Drinks & Pastry Tab
+            { id: 'past-1', name: 'Signature Mille-Feuille', category: 'drinks-pastry', price: 9.50, desc: 'Crisp layered puff pastry loaded with luxurious vanilla bean pastry cream, dusted gently with gold sugar flake powder.', img: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80' },
+            { id: 'alc-1', name: 'Tej Mimosa Cocktail', category: 'drinks-pastry', price: 14.00, desc: 'Authentic organic Ethiopian honey wine balanced with premium sparkling prosecco and fresh orange juice slices.', img: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80' },
+            { id: 'soft-1', name: 'Ambo Mineral Water Twist', category: 'drinks-pastry', price: 4.50, desc: 'Chilled carbonated natural Ethiopian mineral water garnished gracefully with sliced fresh key lime rounds.', img: 'https://images.unsplash.com/photo-1548967131-0e32f3174241?auto=format&fit=crop&w=600&q=80' }
         ];
 
         let cart = [];
         let activeCategory = 'ethiopian';
 
-        // Initialize UI on startup loading
-        window.onload = () => {
-            renderMenuGrid();
-        };
+        window.onload = () => { renderMenuGrid(); };
 
-        // Render food cards based on category filtered state matching screenshot ratings design style
         function renderMenuGrid() {
             const container = document.getElementById('food-grid');
             container.innerHTML = '';
-            
             const currentFilteredItems = MENU_DATA.filter(item => item.category === activeCategory);
             
             currentFilteredItems.forEach(item => {
@@ -240,20 +304,22 @@
 
         function switchCategory(cat) {
             activeCategory = cat;
-            document.getElementById('category-heading').innerText = cat === 'ethiopian' ? 'Premium Traditional Ethiopian' : 'Global Gourmet Selections';
+            const headingMap = {
+                'ethiopian': 'Premium Traditional Ethiopian',
+                'premium': 'Global Gourmet Selections',
+                'drinks-pastry': 'Artisanal Pastries & Beverage Bar'
+            };
+            document.getElementById('category-heading').innerText = headingMap[cat];
             
-            // Swap highlights on action button styling
             const buttons = document.querySelectorAll('#menu-section button');
             buttons.forEach(btn => {
-                btn.classList.remove('border-amber-500', 'text-amber-500', 'bg-amber-500/5');
-                btn.classList.add('border-stone-800', 'text-stone-400');
+                btn.className = "px-3 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-400 hover:text-stone-200 transition-all";
             });
-            event.target.classList.add('border-amber-500', 'text-amber-500', 'bg-amber-500/5');
+            event.target.className = "px-3 py-1.5 text-xs tracking-wider border border-amber-500 text-amber-500 bg-amber-500/5 transition-all";
             
             renderMenuGrid();
         }
 
-        // Sidebar Cart UI controller handlers
         function toggleCart(show) {
             document.getElementById('cart-modal').classList.toggle('hidden', !show);
             renderCartUI();
@@ -262,11 +328,7 @@
         function addItemToOrder(id) {
             const item = MENU_DATA.find(i => i.id === id);
             const exists = cart.find(i => i.id === id);
-            if (exists) {
-                exists.qty += 1;
-            } else {
-                cart.push({ ...item, qty: 1 });
-            }
+            if (exists) { exists.qty += 1; } else { cart.push({ ...item, qty: 1 }); }
             updateCartBadge();
             toggleCart(true);
         }
@@ -275,9 +337,7 @@
             const matched = cart.find(i => i.id === id);
             if (matched) {
                 matched.qty += delta;
-                if (matched.qty <= 0) {
-                    cart = cart.filter(i => i.id !== id);
-                }
+                if (matched.qty <= 0) { cart = cart.filter(i => i.id !== id); }
             }
             updateCartBadge();
             renderCartUI();
@@ -289,9 +349,7 @@
             if (totalCount > 0) {
                 badge.innerText = totalCount;
                 badge.classList.remove('hidden');
-            } else {
-                badge.classList.add('hidden');
-            }
+            } else { badge.classList.add('hidden'); }
         }
 
         function renderCartUI() {
@@ -317,14 +375,13 @@
                             <span class="text-amber-500">$${(item.price * item.qty).toFixed(2)}</span>
                         </div>
                         <div class="flex items-center space-x-2 bg-stone-950 px-2 py-0.5 border border-stone-800">
-                            <button onclick="changeQuantity('${item.id}', -1)" class="text-stone-400 hover:text-amber-500 font-bold">-</button>
+                            <button onclick="changeQuantity('${item.id}', -1)" class="text-stone-400 font-bold">-</button>
                             <span class="text-stone-200 font-bold px-1">${item.qty}</span>
-                            <button onclick="changeQuantity('${item.id}', 1)" class="text-stone-400 hover:text-amber-500 font-bold">+</button>
+                            <button onclick="changeQuantity('${item.id}', 1)" class="text-stone-400 font-bold">+</button>
                         </div>
                     </div>
                 `;
             });
-
             document.getElementById('cart-total').innerText = `$${total.toFixed(2)}`;
         }
 
@@ -335,7 +392,6 @@
             toggleCart(false);
         }
 
-        // Reservation System Actions
         function toggleReservation(show) {
             document.getElementById('reservation-modal').classList.toggle('hidden', !show);
             document.getElementById('reservation-form').classList.remove('hidden');
@@ -346,16 +402,11 @@
             e.preventDefault();
             document.getElementById('reservation-form').classList.add('hidden');
             document.getElementById('reservation-success').classList.remove('hidden');
-            setTimeout(() => {
-                toggleReservation(false);
-                e.target.reset();
-            }, 2500);
+            setTimeout(() => { toggleReservation(false); e.target.reset(); }, 2500);
         }
 
-        // Intelligent Floating AI Client Side Mock Assistant
         function toggleAi(show) {
-            const chatBox = document.getElementById('ai-chat-box');
-            chatBox.classList.toggle('hidden');
+            document.getElementById('ai-chat-box').classList.toggle('hidden');
         }
 
         function handleAiChat(e) {
@@ -363,31 +414,23 @@
             const inputField = document.getElementById('ai-input-field');
             const stream = document.getElementById('ai-messages-stream');
             const userText = inputField.value.trim();
-            
             if (!userText) return;
 
-            // Render message logs from user interface
             stream.innerHTML += `<div class="flex justify-end"><div class="bg-amber-600 text-stone-950 p-2 rounded-sm max-w-[85%] font-medium">${userText}</div></div>`;
             inputField.value = '';
             stream.scrollTop = stream.scrollHeight;
 
-            // Pattern checking instant text answers mock response algorithm engine
             setTimeout(() => {
-                let botAnswer = "That sounds fascinating! I highly suggest making an order for our signature Special Beyaynetu combination spread to discover our traditional cooking styles.";
+                let botAnswer = "That sounds fascinating! Check out our new Bakehouse & Bar menu tab to discover curated cocktails and delicate fresh pastries.";
                 const query = userText.toLowerCase();
 
-                if (query.includes('injera')) {
-                    botAnswer = "Injera is our classic sourdough crepe bread baked using high-nutrient native Teff grain. It serves as your edible plate and utensil—simply tear off pieces to scoop stews!";
-                } else if (query.includes('berbere') || query.includes('spice')) {
-                    botAnswer = "Berbere is our distinct luxury seasoning blend handmade from sun-dried chili pepper strings, fresh ginger, cardamom, holy basil, and garlic cloves.";
-                } else if (query.includes('doro wat')) {
-                    botAnswer = "Doro Wat is the traditional masterpiece of Ethiopian festive hospitality. It requires hours of careful reduction work using red onions, slow-braised chicken, and berbere.";
-                } else if (query.includes('reserve') || query.includes('book')) {
-                    botAnswer = "I can certainly help arrange your stay! Just tap the gold 'Book Table' action button at the top right header of your interface screen.";
-                } else if (query.includes('coffee') || query.includes('buna')) {
-                    botAnswer = "Yes! We run full traditional aromatic coffee ceremony presentation services daily, roasted green from organic heirloom Arabica beans alongside genuine frankincense.";
+                if (query.includes('pastry') || query.includes('cake') || query.includes('mille')) {
+                    botAnswer = "Our gold leaf vanilla Mille-Feuille pastry pairs beautifully with traditional Ethiopian black coffee after a rich meal!";
+                } else if (query.includes('cocktail') || query.includes('alcohol') || query.includes('drink')) {
+                    botAnswer = "We recommend trying our house Tej Mimosa—a modern blend of traditional honey wine and chilled prosecco.";
+                } else if (query.includes('injera')) {
+                    botAnswer = "Injera is our classic sourdough flatbread baked using native high-nutrient Teff grain. It serves as your platter and luxury utensil!";
                 }
-
                 stream.innerHTML += `<div class="flex justify-start"><div class="bg-stone-900 border border-stone-800 text-stone-300 p-2 rounded-sm max-w-[85%]">${botAnswer}</div></div>`;
                 stream.scrollTop = stream.scrollHeight;
             }, 600);
