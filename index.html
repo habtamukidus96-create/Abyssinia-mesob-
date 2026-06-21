@@ -61,7 +61,7 @@
                 <a href="#" onclick="toggleHamburger(false)" class="text-stone-300 hover:text-amber-500 transition-colors py-2 border-b border-stone-900/40">Home</a>
                 <a href="#menu-section" onclick="toggleHamburger(false)" class="text-stone-300 hover:text-amber-500 transition-colors py-2 border-b border-stone-900/40">Menu</a>
                 <a href="#about-section" onclick="toggleHamburger(false)" class="text-stone-300 hover:text-amber-500 transition-colors py-2 border-b border-stone-900/40">About Us</a>
-                <button onclick="toggleHamburger(false); toggleReservation(true);" class="text-left text-stone-300 hover:text-amber-500 transition-colors py-2 uppercase tracking-wider font-medium">Contact Us / Booking</button>
+                <a href="#booking-section" onclick="toggleHamburger(false)" class="text-stone-300 hover:text-amber-500 transition-colors py-2 border-b border-stone-900/40">Contact Us / Booking</a>
             </nav>
         </div>
     </div>
@@ -105,14 +105,14 @@
             <div class="text-center mb-8 space-y-2">
                 <h3 id="category-heading" class="serif-font text-3xl font-normal text-stone-100 tracking-wide">Premium Traditional Ethiopian</h3>
                 <div class="flex flex-wrap justify-center gap-2 pt-2">
-                    <button onclick="switchCategory('ethiopian')" class="px-3 py-1.5 text-xs tracking-wider border border-amber-500 text-amber-500 bg-amber-500/5 transition-all">Ethiopian Heritage</button>
-                    <button onclick="switchCategory('premium')" class="px-3 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-400 hover:text-stone-200 transition-all">Global Gourmet</button>
-                    <button onclick="switchCategory('drinks-pastry')" class="px-3 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-400 hover:text-stone-200 transition-all">Bakehouse & Bar</button>
+                    <button id="tab-ethiopian" onclick="switchCategory('ethiopian')" class="px-3 py-1.5 text-xs tracking-wider border border-amber-500 text-amber-500 bg-amber-500/5 transition-all">Ethiopian Heritage</button>
+                    <button id="tab-premium" onclick="switchCategory('premium')" class="px-3 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-400 hover:text-stone-200 transition-all">Global Gourmet</button>
+                    <button id="tab-drinks-pastry" onclick="switchCategory('drinks-pastry')" class="px-3 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-400 hover:text-stone-200 transition-all">Bakehouse & Bar</button>
                 </div>
             </div>
 
             <!-- Food Grid Layout -->
-            <div id="food-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="food-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <!-- Injected automatically by JavaScript Menu Data Engine -->
             </div>
         </div>
@@ -140,6 +140,49 @@
         </div>
     </section>
 
+    <!-- END OF PAGE CONTACT & BOOKING FORM -->
+    <section id="booking-section" class="py-16 px-4 border-t border-stone-900 bg-stone-900/20">
+        <div class="w-full max-w-md mx-auto bg-stone-950 border border-stone-900 p-6 md:p-8 rounded-sm space-y-6 shadow-xl">
+            <div class="text-center space-y-1">
+                <h3 class="serif-font text-2xl text-amber-500 font-normal tracking-wide">Secure Private Booking</h3>
+                <p class="text-[11px] text-stone-400 uppercase tracking-widest">Abyssinia Mesob Lounge Experience</p>
+            </div>
+            <div id="footer-reservation-success" class="hidden text-center py-4 bg-emerald-950/20 border border-emerald-900/50 rounded-sm">
+                <span class="text-emerald-400 text-xs font-bold block">✓ Table Reservation Allocated Successfully!</span>
+            </div>
+            <form onsubmit="handleFooterReservation(event)" class="space-y-4 text-xs">
+                <div>
+                    <label class="text-stone-400 tracking-wider block mb-1 uppercase font-medium">Full Name</label>
+                    <input type="text" required class="w-full bg-stone-900 border border-stone-800 p-2.5 text-stone-100 focus:outline-none focus:border-amber-500 transition-colors">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-stone-400 tracking-wider block mb-1 uppercase font-medium">Date</label>
+                        <input type="date" required class="w-full bg-stone-900 border border-stone-800 p-2.5 text-stone-100 focus:outline-none focus:border-amber-500 transition-colors">
+                    </div>
+                    <div>
+                        <label class="text-stone-400 tracking-wider block mb-1 uppercase font-medium">Time Slot</label>
+                        <input type="time" required class="w-full bg-stone-900 border border-stone-800 p-2.5 text-stone-100 focus:outline-none focus:border-amber-500 transition-colors">
+                    </div>
+                </div>
+                <div>
+                    <label class="text-stone-400 tracking-wider block mb-1 uppercase font-medium">Party Seating</label>
+                    <select class="w-full bg-stone-900 border border-stone-800 p-2.5 text-stone-100 focus:outline-none focus:border-amber-500 transition-colors">
+                        <option>2 Guests</option>
+                        <option>4 Guests</option>
+                        <option>6+ Guests (Mesob Room)</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-stone-950 font-bold uppercase tracking-widest py-3 text-center transition-colors">
+                    Confirm Seating Request
+                </button>
+            </form>
+            <div class="text-center pt-2 text-[10px] text-stone-500 border-t border-stone-900">
+                Direct Desk: <span class="text-stone-300 font-mono">+251 922 785 816</span> | Location: Megenagna, Addis Ababa
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER WITH SOCIAL LINKS -->
     <footer class="border-t border-stone-900 bg-stone-950 py-12 px-4 text-center space-y-6">
         <div class="space-y-1">
@@ -158,7 +201,7 @@
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.48 2.75-2.7.01-.03.01-.14-.05-.2-.06-.06-.16-.04-.23-.03-.1.02-1.69 1.07-4.77 3.15-.45.3-.86.46-1.22.45-.4-.01-1.17-.23-1.74-.41-.7-.23-1.26-.35-1.21-.74.03-.2.3-.41.82-.62 3.2-1.39 5.34-2.31 6.42-2.76 3.06-1.27 3.7-1.49 4.11-1.5.09 0 .29.02.42.13.11.09.14.21.15.3-.01.06-.01.14-.02.21z"/></svg>
             </a>
             <a href="https://instagram.com" target="_blank" class="hover:text-amber-500 transition-colors" title="Instagram">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204 .013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
         </div>
     </footer>
@@ -185,56 +228,53 @@
         </div>
     </div>
 
-    <!-- BOOKING RESERVATION MODAL -->
-    <div id="reservation-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4 hidden">
-        <div class="w-full max-w-sm bg-stone-950 border border-stone-900 p-5 rounded-sm relative space-y-4">
-            <button onclick="toggleReservation(false)" class="absolute top-3 right-3 text-stone-400 hover:text-stone-100 text-xl font-bold focus:outline-none">&times;</button>
-            <div class="text-center">
-                <h3 class="serif-font text-xl text-amber-500">Reserve a Luxury Table</h3>
-                <p class="text-[11px] text-stone-400">Experience authentic hospitality from Addis Ababa</p>
-            </div>
-            <div id="reservation-success" class="hidden text-center py-6 space-y-2">
-                <div class="text-emerald-500 text-3xl font-bold">✓</div>
-                <h4 class="text-stone-200 text-xs font-bold">Table Allocated!</h4>
-            </div>
-            <form id="reservation-form" onsubmit="handleReservation(event)" class="space-y-3 text-[11px]">
+    <!-- AI DINING CONCIERGE ASSISTANT AGENT MODULE -->
+    <div class="fixed bottom-4 right-4 z-50 flex flex-col items-end">
+        <div id="ai-chat-box" class="w-72 md:w-80 h-96 bg-stone-950 border border-amber-500/30 rounded-sm shadow-2xl flex flex-col justify-between mb-2 overflow-hidden hidden">
+            <div class="bg-stone-900 border-b border-stone-800 p-2.5 flex items-center justify-between">
                 <div>
-                    <label class="text-stone-400 uppercase tracking-wider block mb-1">Your Full Name</label>
-                    <input type="text" required class="w-full bg-stone-900 border border-stone-800 p-2 text-stone-100 focus:outline-none focus:border-amber-500">
+                    <h4 class="text-[11px] font-bold uppercase text-stone-200 tracking-wider">Mesob Concierge Agent</h4>
+                    <span class="text-[8px] text-emerald-400 flex items-center gap-1">● AI Engine Online</span>
                 </div>
-                <div class="grid grid-cols-2 gap-2">
-                    <div>
-                        <label class="text-stone-400 uppercase tracking-wider block mb-1">Select Date</label>
-                        <input type="date" required class="w-full bg-stone-900 border border-stone-800 p-2 text-stone-100 focus:outline-none focus:border-amber-500">
-                    </div>
-                    <div>
-                        <label class="text-stone-400 uppercase tracking-wider block mb-1">Select Time</label>
-                        <input type="time" required class="w-full bg-stone-900 border border-stone-800 p-2 text-stone-100 focus:outline-none focus:border-amber-500">
-                    </div>
+                <button onclick="toggleAi(false)" class="text-stone-400 hover:text-stone-100 font-bold">&times;</button>
+            </div>
+
+            <div id="ai-messages-stream" class="flex-1 p-3 overflow-y-auto space-y-2 text-[11px] leading-relaxed">
+                <div class="bg-stone-900 text-stone-300 p-2 rounded-sm max-w-[90%]">
+                    Selam! I am your AI Host for Abyssinia Mesob. Ask me about our menu, pastries, premium bar items, location, or direct phone number!
                 </div>
-                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-stone-950 font-bold uppercase tracking-widest py-2.5 text-center mt-1">
-                    Confirm Allocation
-                </button>
+            </div>
+
+            <form onsubmit="handleAiChat(event)" class="p-2 border-t border-stone-900 bg-stone-900/50 flex space-x-1.5">
+                <input id="ai-input-field" type="text" placeholder="Ask about foods, drinks, contact..." class="flex-1 bg-stone-950 border border-stone-800 rounded-sm px-2 py-1 text-[11px] text-stone-100 placeholder-stone-600 focus:outline-none focus:border-amber-500">
+                <button type="submit" class="bg-amber-600 text-stone-950 px-3 py-1 font-bold text-[11px] rounded-sm hover:bg-amber-700">Ask</button>
             </form>
         </div>
+
+        <button onclick="toggleAi(true)" class="bg-amber-600 hover:bg-amber-700 text-stone-950 p-3 rounded-full shadow-2xl focus:outline-none border-2 border-stone-950 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+        </button>
     </div>
 
     <!-- APP ENGINE WORKER JAVASCRIPT -->
     <script>
         const MENU_DATA = [
             // Ethiopian Heritage Tab
-            { id: 'eth-1', name: 'Special Beyaynetu (እንጀራ በያይነቱ)', category: 'ethiopian', price: 24.00, desc: 'A rich platter of colorful split peas, lentils, and slow cooked seasonal vegetable stews perfectly spread over spongy sourdough Injera.', img: 'ethiopian-food-yetsom-beyaynetu.jpg.webp' },
-            { id: 'eth-2', name: 'Doro Wat (ዶሮ ወጥ)', category: 'ethiopian', price: 28.50, desc: 'The traditional masterpiece of slow-simmered chicken drumsticks in rich deep Berbere sauce, accented with spiced butter and hard boiled egg.', img: 'images (14).jpeg' },
-            { id: 'eth-3', name: 'Prime Kitfo (ክትፎ)', category: 'ethiopian', price: 30.00, desc: 'Finely minced lean beef, seasoned with mitmita spice blend and niter kibbeh spiced clarified butter, served beautifully warm.', img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80' },
+            { id: 'eth-1', name: 'Special Beyaynetu (እንጀራ በያይነቱ)', category: 'ethiopian', price: 24.00, desc: 'A rich platter of colorful split peas, lentils, and slow cooked seasonal vegetable stews spread over sourdough Injera.', img: 'beyaynt.jpg' },
+            { id: 'eth-2', name: 'Doro Wat (ዶሮ ወጥ)', category: 'ethiopian', price: 28.50, desc: 'The traditional masterpiece of slow-simmered chicken drumsticks in rich deep Berbere sauce, accented with spiced butter.', img: 'dorowot.jpg' },
+            { id: 'eth-3', name: 'Prime Kitfo (ክትፎ)', category: 'ethiopian', price: 30.00, desc: 'Finely minced lean beef, seasoned with mitmita spice blend and niter kibbeh spiced clarified butter.', img: 'kitfo.jpg' },
+            { id: 'eth-4', name: 'Sizzling Tibs (ጥብስ)', category: 'ethiopian', price: 26.00, desc: 'Tender cubed beef sautéed with fresh rosemary, garlic, sliced red onions, and green peppers.', img: 'tibs.jpg' },
             
             // Global Gourmet Tab
-            { id: 'prem-1', name: 'Seared Wagyu Fillet Gold', category: 'premium', price: 48.00, desc: 'Ultra-premium pan-seared wagyu beef finished in melted mountain herbs, paired with delicate reduction purées and seasonal garnishing.', img: 'https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=600&q=80' },
+            { id: 'prem-1', name: 'Seared Wagyu Fillet Gold', category: 'premium', price: 48.00, desc: 'Ultra-premium pan-seared wagyu beef finished in melted mountain herbs, paired with delicate reduction purées.', img: 'https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=600&q=80' },
             { id: 'prem-2', name: 'Truffle Wild Forest Risotto', category: 'premium', price: 32.50, desc: 'Rich Arborio rice creamy blend folded with selected wild mushrooms, complete with shavings of black winter truffles.', img: 'https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=600&q=80' },
             
             // Drinks & Pastry Tab
-            { id: 'past-1', name: 'Signature Mille-Feuille', category: 'drinks-pastry', price: 9.50, desc: 'Crisp layered puff pastry loaded with luxurious vanilla bean pastry cream, dusted gently with gold sugar flake powder.', img: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80' },
-            { id: 'alc-1', name: 'Tej Mimosa Cocktail', category: 'drinks-pastry', price: 14.00, desc: 'Authentic organic Ethiopian honey wine balanced with premium sparkling prosecco and fresh orange juice slices.', img: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80' },
-            { id: 'soft-1', name: 'Ambo Mineral Water Twist', category: 'drinks-pastry', price: 4.50, desc: 'Chilled carbonated natural Ethiopian mineral water garnished gracefully with sliced fresh key lime rounds.', img: 'https://images.unsplash.com/photo-1548967131-0e32f3174241?auto=format&fit=crop&w=600&q=80' }
+            { id: 'past-1', name: 'Signature Mille-Feuille', category: 'drinks-pastry', price: 9.50, desc: 'Crisp layered puff pastry loaded with luxurious vanilla bean pastry cream, dusted gently with gold sugar.', img: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80' },
+            { id: 'alc-1', name: 'Tej Mimosa Cocktail', category: 'drinks-pastry', price: 14.00, desc: 'Authentic organic Ethiopian honey wine balanced with premium sparkling prosecco and orange juice.', img: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80' },
+            { id: 'soft-1', name: 'Ambo Mineral Water Twist', category: 'drinks-pastry', price: 4.50, desc: 'Chilled carbonated natural Ethiopian mineral water garnished gracefully with sliced fresh key lime.', img: 'https://images.unsplash.com/photo-1548967131-0e32f3174241?auto=format&fit=crop&w=600&q=80' }
         ];
 
         let cart = [];
@@ -256,7 +296,7 @@
                         </div>
                         <div class="p-4 flex-1 flex flex-col justify-between space-y-3 text-center">
                             <div class="space-y-1">
-                                <h4 class="serif-font text-base text-stone-100 font-medium tracking-wide">${item.name}</h4>
+                                <h4 class="serif-font text-sm text-stone-100 font-medium tracking-wide">${item.name}</h4>
                                 <p class="text-[11px] text-stone-400 leading-relaxed font-light">${item.desc}</p>
                             </div>
                             <button onclick="addItemToOrder('${item.id}')" class="w-full py-2 text-[11px] uppercase tracking-wider bg-stone-900 hover:bg-amber-600 text-stone-300 hover:text-stone-950 font-bold border border-stone-800 transition-colors">
@@ -270,6 +310,22 @@
 
         function switchCategory(cat) {
             activeCategory = cat;
+            
+            // Clear out active styles from all three tabs explicitly
+            const tabs = ['ethiopian', 'premium', 'drinks-pastry'];
+            tabs.forEach(t => {
+                const element = document.getElementById(`tab-${t}`);
+                if (element) {
+                    element.className = "px-3 py-1.5 text-xs tracking-wider border border-stone-800 text-stone-400 hover:text-stone-200 transition-all";
+                }
+            });
+
+            // Apply active gold highlighter borders directly to the target tab element
+            const activeTabElement = document.getElementById(`tab-${cat}`);
+            if (activeTabElement) {
+                activeTabElement.className = "px-3 py-1.5 text-xs tracking-wider border border-amber-500 text-amber-500 bg-amber-500/5 transition-all";
+            }
+
             const headingMap = {
                 'ethiopian': 'Premium Traditional Ethiopian',
                 'premium': 'Global Gourmet Selections',
@@ -349,23 +405,54 @@
         }
 
         function triggerOrderCheckout() {
-            alert('Your order selection has been securely transmitted directly to the kitchen team. Thank you!');
+            alert('Your order has been transmitted directly to the kitchen team. Thank you!');
             cart = [];
             updateCartBadge();
             toggleCart(false);
         }
 
-        function toggleReservation(show) {
-            document.getElementById('reservation-modal').classList.toggle('hidden', !show);
-            document.getElementById('reservation-form').classList.remove('hidden');
-            document.getElementById('reservation-success').classList.add('hidden');
+        function handleFooterReservation(e) {
+            e.preventDefault();
+            document.getElementById('footer-reservation-success').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('footer-reservation-success').classList.add('hidden');
+                e.target.reset();
+            }, 3000);
         }
 
-        function handleReservation(e) {
+        function toggleAi(show) {
+            document.getElementById('ai-chat-box').classList.toggle('hidden', !show);
+        }
+
+        function handleAiChat(e) {
             e.preventDefault();
-            document.getElementById('reservation-form').classList.add('hidden');
-            document.getElementById('reservation-success').classList.remove('hidden');
-            setTimeout(() => { toggleReservation(false); e.target.reset(); }, 2000);
+            const inputField = document.getElementById('ai-input-field');
+            const stream = document.getElementById('ai-messages-stream');
+            const userText = inputField.value.trim();
+            if (!userText) return;
+
+            stream.innerHTML += `<div class="flex justify-end"><div class="bg-amber-600 text-stone-950 p-2 rounded-sm max-w-[85%] font-medium">${userText}</div></div>`;
+            inputField.value = '';
+            stream.scrollTop = stream.scrollHeight;
+
+            setTimeout(() => {
+                let botAnswer = "I'm happy to assist you! For premium traditional food, global selections, or drinks, please explore our interactive menu tabs.";
+                const query = userText.toLowerCase();
+
+                // Advanced AI knowledge rule matrix matching instructions
+                if (query.includes('food') || query.includes('beyaynet') || query.includes('doro') || query.includes('kitfo') || query.includes('tibs')) {
+                    botAnswer = "We serve high-end traditional Ethiopian items: Special Beyaynetu ($24), authentic Doro Wat ($28.50), premium Kitfo ($30.00), and beautiful sizzling meat Tibs ($26.00).";
+                } else if (query.includes('drink') || query.includes('cocktail') || query.includes('alcohol') || query.includes('ambo') || query.includes('pastry') || query.includes('mille')) {
+                    botAnswer = "Under our Bakehouse & Bar program, we offer Signature vanilla Mille-Feuille pastry ($9.50), our signature honey-wine Tej Mimosa cocktail ($14.00), and chilled Ambo Mineral Twist ($4.50).";
+                } else if (query.includes('location') || query.includes('where') || query.includes('place') || query.includes('address')) {
+                    botAnswer = "Abyssinia Mesob is located in Megenagna, Addis Ababa, Ethiopia, offering a striking premium lounge vibe.";
+                } else if (query.includes('contact') || query.includes('phone') || query.includes('number') || query.includes('book')) {
+                    botAnswer = "You can contact our reception desk directly at +251 922 785 816, or fill out the booking ledger directly at the bottom of the page!";
+                }
+
+                stream.innerHTML += `<div class="flex justify-start"><div class="bg-stone-900 border border-stone-800 text-stone-300 p-2 rounded-sm max-w-[85%]">${botAnswer}</div></div>`;
+                stream.scrollTop = stream.scrollHeight;
+            }, 500);
         }
     </script>
 </body>
